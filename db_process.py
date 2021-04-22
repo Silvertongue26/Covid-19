@@ -10,7 +10,7 @@ data = pd.read_csv('defunciones.csv')
 total_decesos = len(data)
 total_registros = len(total)
 #print(total_registros)
-print("Tasa de mortalidad: ", round(((total_decesos*100)/total_registros),2))
+print("Tasa de mortalidad: ", round(((total_decesos*100)/total_registros),2), "%")
 
 
 #DEFUNCIONES
