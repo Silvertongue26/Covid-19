@@ -1,37 +1,45 @@
-## Welcome to GitHub Pages
+## Entorno con herramientas para Análisis de datos
 
-You can use the [editor on GitHub](https://github.com/Silvertongue26/Covid19/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+En este repositorio se encontrara una imágen de docker basada en Ubuntu 18.04, con herramientas de analísis de datos. Como base para ejemplificar la funcionalidad de la imágen, se incluye un ejemplo utilizando la base de datos publica para la pandemia de COVID-19. 
 
 ### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Las herramientas incluidas con esta imágen son:
 
+-_CSVKIT:_ Es una herramienta de linea de commandos para trabajar con archivos en formato CSV.
+
+-_PYTHON 3.8:_ Lenguaje de programación de propósito general, orientado a objetos, que también puede utilizarse para desarrollo web.
+
+-_NUMPY:_ Biblioteca para el lenguaje de programación Python que da soporte para crear vectores y matrices grandes multidimensionales.
+
+-_PANDAS:_ Biblioteca de software escrita como extensión de NumPy para manipulación y análisis de datos para el lenguaje de programación Python.
+
+
+### Instalación
+
+Se requiere instalar [Docker](https://www.docker.com/)
+
+En la terminal escribir el commando: 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+//Ejecutar el commando para crear la imagen
+docker build -t nombre_de_imagen .
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Una vez que se genere el contendor, si se desea generar el contendor de la imagen 
 
-### Jekyll Themes
+```markdown
+//Ejecutar el commando para crear el contenedor
+docker run -it --name nombre_de_contenedor nombre_de_imagen
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Silvertongue26/Covid19/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Ejemplo de analisis a base de datos 
 
-### Support or Contact
+Se descargara automaticamente la base de datos sobre COVID 19 de la [pagina](https://www.gob.mx/salud/documentos/datos-abiertos-152127), tambien se van a generar tres archivos.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+**-seleccion_total.csv:** contiene la base de datos depurada con los valores de mayor interes apra realizar un analisis
+
+**-defunciones.csv:** contiene el segmento de defunciones de la base de datos original
+
+**-resultado.txt:** contiene la tasa de mortalidad y el numero de dias promedio a partir de la presencia de sintomas para el deceso del paciente.
+
+
