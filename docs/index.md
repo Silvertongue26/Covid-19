@@ -2,7 +2,7 @@
 
 En este repositorio se encontrara una imágen de docker basada en Ubuntu 18.04, con herramientas de analísis de datos. Como base para ejemplificar la funcionalidad de la imágen, se incluye un ejemplo utilizando la base de datos publica para la pandemia de COVID-19. 
 
-### Markdown
+### Descripción
 
 Las herramientas incluidas con esta imágen son:
 
@@ -25,7 +25,7 @@ En la terminal escribir el commando:
 docker build -t nombre_de_imagen .
 ```
 
-Una vez que se genere el contendor, si se desea generar el contendor de la imagen 
+Una vez que se genere el contendor, si se desea generar el contendor de la imágen 
 
 ```markdown
 //Ejecutar el commando para crear el contenedor
@@ -34,7 +34,7 @@ docker run -it --name nombre_de_contenedor nombre_de_imagen
 
 ### Ejemplo de analisis a base de datos 
 
-Se descargara automaticamente la base de datos sobre COVID 19 de la [pagina](https://www.gob.mx/salud/documentos/datos-abiertos-152127), tambien se van a generar tres archivos.
+Se descargara automaticamente la base de datos sobre COVID 19 de la [página](https://www.gob.mx/salud/documentos/datos-abiertos-152127), tambien se van a generar tres archivos.
 
 **-seleccion_total.csv:** contiene la base de datos depurada con los valores de mayor interes apra realizar un analisis
 
